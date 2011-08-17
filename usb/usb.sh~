@@ -1,0 +1,28 @@
+#!/bin/bash
+#Program:
+# test usb interface fuction
+#History:
+# 2011/07/13 wfs first release
+echo "usb test... ..."
+mknod /dev/sda1
+mount /dev/sda1 /mnt && echo "test reading... ..." || ( echo "can not mount usb flash" && exit 1)
+cd /mnt 
+mv /mnt/testusb /usr/local/
+cd /usr/local
+if [ -e testusb ];
+echo "usb read succed!"
+else
+echo "usb read test fail!"
+fi
+mv  testusb /mnt/
+cd /mnt/
+if [ -e testusb ];
+then
+echo "usb write succed!"
+umount /mnt
+else
+echo "usb write fail!"
+fi
+exit 0
+
+
