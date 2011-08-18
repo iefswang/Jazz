@@ -16,15 +16,15 @@ else
 	echo "can not mount usb flash" 
 	exit 1
 fi
-mv  /test233/usb/testfile /mnt/
+mv  ./testfile /mnt/
 if [ -e /mnt/testfile ];
 then
 echo "usb write succed!"
 else
 echo "usb write test fail!"
 fi
-mv  /mnt/testfile /test233/usb/
-if [ -e /test233/usb/testfile ];
+mv  /mnt/testfile .
+if [ -e ./testfile ];
 then
 echo "usb read succed!"
 umount /mnt
