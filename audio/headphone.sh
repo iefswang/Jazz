@@ -23,5 +23,5 @@ mknod /dev/snd/seq c 116 1
 mknod /dev/snd/timer c 116 33
 amixer -q -c 0 sset 'Speaker',0  mute
 fi
-aplay $1 && echo "headphone test is over" | echo "headphone test failed"
+aplay $1 && echo "headphone test is over" || echo "headphone test failed"
 
