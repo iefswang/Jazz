@@ -39,26 +39,26 @@ int main(int argc, char *argv[])
     while(1)
     {
     read(fd_kbd,  &event, sizeof(event));
-    if(event.code == KEY_LEFT && event.value == 0)
+    if(event.code == KEY_LEFT && event.value == 1)
     {
 	printf("KEY_LEFT\n");
     }
-    else if(event.code == KEY_RIGHT && event.value ==0)
+    else if(event.code == KEY_RIGHT && event.value ==1)
     {
 	printf("KEY_RIGHT\n");
     }
-    else if(event.code == KEY_UP && event.value == 0)
+    else if(event.code == KEY_UP && event.value == 1)
     {
 	printf("KEY_UP\n");
     }
-    else if(event.code == KEY_DOWN && event.value == 0)
+    else if(event.code == KEY_DOWN && event.value == 1)
     {
 	printf("KEY_DOWN\n");
 	printf("you have pressed KEY_DOWN,exit\n");
 	return 0;
 	
     }
-    else if(event.code == KEY_SELECT && event.value == 0)
+    else if(event.code == KEY_SELECT && event.value == 1)
     {
 	printf("KEY_SELECT\n");
     }
