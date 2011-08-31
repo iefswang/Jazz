@@ -1,0 +1,6 @@
+there are several test programs which are based on imx233.
+
+".sh"   shell scripts.execute by "sh *.sh"
+".c"    c program ,you should compile first,then execute
+
+"testfile" is used to file to test.it can be changed except its name
